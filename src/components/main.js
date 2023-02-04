@@ -3,7 +3,8 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
-import TextBox from "./texField";
+import TextBox from "./textField";
+import NavBar from "./navBar";
 import axios from 'axios';
 import swal from 'sweetalert';
 import './main.css';
@@ -50,23 +51,26 @@ function Main(){
     }
 
     return(
-        <div className='card'>
-            <Card className='cardStyle'>
-                <CardContent>
-                    <div className='pretexting-detector' style={{marginBottom: 20}}>Pretexting Detector</div>
-                    <TextBox label="Masukkan teks"
-                        value = {prediction}
-                        onChange={onChangePrediction}
-                    />
-                </CardContent>
-                <CardActions className='CardActions'>
-                    <Button 
-                        style={{
-                            background: 'grey', color: 'white', marginBottom: 20
-                        }}
-                        onClick={onSubmit}>Check !!</Button>
-                </CardActions>
-            </Card>
+        <div className="navbar" style={{padding: '8px'}}>
+            <NavBar/>
+            <div className='card'>
+                <Card className='cardStyle'>
+                    <CardContent>
+                        <div className='pretexting-detector' style={{marginBottom: 20}}>Pretexting Detector Super App</div>
+                        <TextBox label="Masukkan teks"
+                            value = {prediction}
+                            onChange={onChangePrediction}
+                        />
+                    </CardContent>
+                    <CardActions className='CardActions'>
+                        <Button 
+                            style={{
+                                background: 'RoyalBlue', color: 'white', marginBottom: 10
+                            }}
+                            onClick={onSubmit}>Check !!</Button>
+                    </CardActions>
+                </Card>
+            </div>
         </div>
     )
 }
