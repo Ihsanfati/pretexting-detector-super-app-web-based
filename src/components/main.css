@@ -1,0 +1,22 @@
+.card {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.cardStyle{
+    width: 500px;
+    border-style:groove;
+    border-color: rgba(0, 0, 0, 0.74);
+}
+ 
+.pretexting-detector {
+    font-Weight:600px;
+    text-Align:center;
+    font-Size:20px
+}
+ 
+.CardActions{
+    justify-content: center;
+}
