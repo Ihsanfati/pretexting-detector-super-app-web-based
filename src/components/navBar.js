@@ -14,7 +14,6 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
 const pages = ['About Us'];
-const settings = ['Profile', 'Logout'];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -125,11 +124,6 @@ function Navbar() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-              </IconButton>
-            </Tooltip>
             <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
@@ -146,16 +140,6 @@ function Navbar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              <MenuItem key={settings[0]} onClick={handleCloseUserMenu}>
-                <Button href='#'>
-                  <Typography textAlign="center">{settings[0]}</Typography>
-                </Button>
-              </MenuItem>
-              <MenuItem key={settings[1]} onClick={handleCloseUserMenu}>
-                <Button href='/login'>
-                  <Typography textAlign="center">{settings[1]}</Typography>
-                </Button>
-              </MenuItem>
             </Menu>
           </Box>
         </Toolbar>
